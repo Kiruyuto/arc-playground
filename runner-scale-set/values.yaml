@@ -1,0 +1,238 @@
+## https://github.com/actions/actions-runner-controller/blob/master/charts/gha-runner-scale-set/values.yaml
+
+## ex: https://github.com/myorg/myrepo or https://github.com/myorg
+githubConfigUrl: "https://github.com/ExampleOrg"
+
+githubConfigSecret:
+  # NOTE: IDs MUST be strings, use quotes
+  github_app_id: "123123123"
+  github_app_installation_id: "123123123"
+  github_app_private_key: |
+     -----BEGIN RSA PRIVATE KEY-----
+     Easiest way when redeploying test clusters multiple times
+     -----END RSA PRIVATE KEY-----
+## Pre-defined Kubernetes secret. Recommended for production
+## NOTE: Secret name & namespace should be lowercase. Key must be in .pem format
+## NOTE: The secret must be created in the same namespace as the runner scale set
+## Command to create the secret:
+## kubectl create secret generic SECRET_NAME --namespace=NAMESPACE \
+##  --from-literal=github_app_id=123123123 \
+##  --from-literal=github_app_installation_id=123123123 \
+##  --from-file=github_app_private_key="$(cat /path/to/github_app_private_key.pem)"
+#githubConfigSecret: pre-defined-secret
+
+maxRunners: 20
+minRunners: 1
+runnerGroup: "Alune"
+runnerScaleSetName: "alune-sh" # Name of the runner scale set to create.  Defaults to the helm release name
+
+
+## Container mode is an object that provides out-of-box configuration
+## for dind and kubernetes mode. Template will be modified as documented under the
+## template object.
+##
+## If any customization is required for dind or kubernetes mode, containerMode should remain
+## empty, and configuration should be applied to the template.
+#containerMode:
+# type: "dind"  ## type can be set to dind or kubernetes
+## The following is required when containerMode.type=kubernetes
+# kubernetesModeWorkVolumeClaim:
+#  accessModes: ["ReadWriteOnce"]
+#     # For local testing, use https://github.com/openebs/dynamic-localpv-provisioner/blob/develop/docs/quickstart.md to provide 
+#     # dynamic provision volume with storageClassName: openebs-hostpath
+#  storageClassName: "openebs-hostpath"
+#  resources:
+#   requests:
+#    storage: 2Gi
+
+## listenerTemplate is the PodSpec for each listener Pod
+## For reference: https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/#PodSpec
+# listenerTemplate:
+#   spec:
+#     containers:
+#     # Use this section to append additional configuration to the listener container.
+#     # If you change the name of the container, the configuration will not be applied to the listener,
+#     # and it will be treated as a side-car container.
+#     - name: listener
+#       securityContext:
+#         runAsUser: 1000
+#     # Use this section to add the configuration of a side-car container.
+#     # Comment it out or remove it if you don't need it.
+#     # Spec for this container will be applied as is without any modifications.
+#     - name: side-car
+#       image: example-sidecar
+
+## template is the PodSpec for each runner Pod
+## For reference: https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/#PodSpec
+
+## template.spec will be modified if you change the container mode
+## With containerMode.type=dind, we will populate the template.spec with following pod spec
+template:
+  spec:
+    initContainers:
+    - name: init-dind-externals
+      image: ghcr.io/kiruyuto/arc-playground/custom-action-runner:dev
+      command: ["cp", "-r", "/home/runner/externals/.", "/home/runner/tmpDir/"]
+      volumeMounts:
+        - name: dind-externals
+          mountPath: /home/runner/tmpDir
+    containers:
+    - name: runner
+      image: ghcr.io/kiruyuto/arc-playground/custom-action-runner:dev
+      command: ["/home/runner/run.sh"]
+      env:
+        - name: DOCKER_HOST
+          value: unix:///var/run/docker.sock
+        - name: RUNNER_ALLOW_RUNASROOT
+          value: "1"
+      volumeMounts:
+        - name: work
+          mountPath: /home/runner/_work
+        - name: dind-sock
+          mountPath: /var/run
+      securityContext:
+        runAsUser: 0
+        runAsGroup: 0
+        fsGroup: 0
+    - name: dind
+      image: docker:dind
+      args:
+        - dockerd
+        - --host=unix:///var/run/docker.sock
+        - --group=$(DOCKER_GROUP_GID)
+      env:
+        - name: DOCKER_GROUP_GID
+          value: "123"
+      securityContext:
+        privileged: true
+      volumeMounts:
+        - name: work
+          mountPath: /home/runner/_work
+        - name: dind-sock
+          mountPath: /var/run
+        - name: dind-externals
+          mountPath: /home/runner/externals
+    volumes:
+    - name: work
+      emptyDir: {}
+    - name: dind-sock
+      emptyDir: {}
+    - name: dind-externals
+      emptyDir: {}
+  
+######################################################################################################
+  
+## With containerMode.type=kubernetes, we will populate the template.spec with following pod spec
+# template:
+#   spec:
+#     containers:
+#     - name: runner
+#       image: ghcr.io/actions/actions-runner:latest
+#       command: ["/home/runner/run.sh"]
+#       env:
+#         - name: ACTIONS_RUNNER_CONTAINER_HOOKS
+#           value: /home/runner/k8s/index.js
+#         - name: ACTIONS_RUNNER_POD_NAME
+#           valueFrom:
+#             fieldRef:
+#               fieldPath: metadata.name
+#         - name: ACTIONS_RUNNER_REQUIRE_JOB_CONTAINER
+#           value: "true"
+#       volumeMounts:
+#         - name: work
+#           mountPath: /home/runner/_work
+#     volumes:
+#       - name: work
+#         ephemeral:
+#           volumeClaimTemplate:
+#             spec:
+#               accessModes: [ "ReadWriteOnce" ]
+#               storageClassName: "local-path"
+#               resources:
+#                 requests:
+#                   storage: 1Gi
+
+######################################################################################################
+
+# template:
+#   spec:
+#     containers:
+#       - name: runner
+#         image: ghcr.io/actions/actions-runner:latest
+#         command: ["/home/runner/run.sh"]
+#         env:
+#         - name: ACTIONS_RUNNER_REQUIRE_JOB_CONTAINER
+#           value: "false"
+
+## Optional controller service account that needs to have required Role and RoleBinding
+## to operate this gha-runner-scale-set installation.
+## The helm chart will try to find the controller deployment and its service account at installation time.
+## In case the helm chart can't find the right service account, you can explicitly pass in the following value
+## to help it finish RoleBinding with the right service account.
+## Note: if your controller is installed to only watch a single namespace, you have to pass these values explicitly.
+# controllerServiceAccount:
+#   namespace: arc-system
+#   name: test-arc-gha-runner-scale-set-controller
+
+# Overrides the default `.Release.Namespace` for all resources in this chart.
+namespaceOverride: ""
+
+## Optional annotations and labels applied to all resources created by helm installation
+##
+## Annotations applied to all resources created by this helm chart. Annotations will not override the default ones, so make sure
+## the custom annotation is not reserved.
+# annotations:
+#   key: value
+##
+## Labels applied to all resources created by this helm chart. Labels will not override the default ones, so make sure
+## the custom label is not reserved.
+# labels:
+#   key: value
+
+## If you want more fine-grained control over annotations applied to particular resource created by this chart,
+## you can use `resourceMeta`.
+## Order of applying labels and annotations is:
+## 1. Apply labels/annotations globally, using `annotations` and `labels` field
+## 2. Apply `resourceMeta` labels/annotations
+## 3. Apply reserved labels/annotations
+# resourceMeta:
+#   autoscalingRunnerSet:
+#     labels:
+#       key: value
+#     annotations:
+#       key: value
+#   githubConfigSecret:
+#     labels:
+#       key: value
+#     annotations:
+#       key: value
+#   kubernetesModeRole:
+#     labels:
+#       key: value
+#     annotations:
+#       key: value
+#   kubernetesModeRoleBinding:
+#     labels:
+#       key: value
+#     annotations:
+#       key: value
+#   kubernetesModeServiceAccount:
+#     labels:
+#       key: value
+#     annotations:
+#       key: value
+#   managerRole:
+#     labels:
+#       key: value
+#     annotations:
+#       key: value
+#   managerRoleBinding:
+#     labels:
+#       key: value
+#     annotations:
+#       key: value
+#   noPermissionServiceAccount:
+#     labels:
+#       key: value
+#     annotations:
+#       key: value
