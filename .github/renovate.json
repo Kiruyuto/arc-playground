@@ -1,0 +1,6 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [ "github>kiruyuto/renovate-config", "helpers:pinGitHubActionDigests" ],
+  "baseBranches": [ "master" ],
+  "rebaseWhen": "behind-base-branch"
+}
