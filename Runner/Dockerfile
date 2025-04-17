@@ -1,9 +1,10 @@
 FROM ghcr.io/actions/actions-runner:2.323.0
 
+USER root
+
 RUN apt-get update && \
     apt-get install -y wget && \
     mkdir -p -m 755 /etc/apt/keyrings && \
-    chmod -R 755 /var/lib/apt/lists && \
     out=$(mktemp) && wget -nv -O $out https://cli.github.com/packages/githubcli-archive-keyring.gpg && \
     cat $out | tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null && \
     chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg && \
@@ -11,5 +12,3 @@ RUN apt-get update && \
     apt-get update && \
     apt-get install -y gh && \
     rm -rf /var/lib/apt/lists/*
-
-USER root
