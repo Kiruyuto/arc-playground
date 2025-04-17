@@ -22,6 +22,8 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - name: "Get lowercase repository name"
+        run: echo "repository_lowercase=${GITHUB_REPOSITORY@L}" >> "${GITHUB_ENV}"
       - name: "Build and push Docker image"
         uses: docker/build-push-action@471d1dc4e07e5cdedd4c2171150001c434f0b7a4 # v6.15.0
         with:
@@ -29,7 +31,5 @@ jobs:
           file: Runner/Dockerfile
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}/custom-action-runner:dev
-            ghcr.io/${{ github.repository }}/custom-action-runner:${{ github.sha }}
-          # build-args: |
-          #   BUILD_CONFIGURATION=Release
+            ghcr.io/${{ env.repository_lowercase }}/custom-action-runner:dev
+            ghcr.io/${{ env.repository_lowercase }}/custom-action-runner:${{ github.sha }}
