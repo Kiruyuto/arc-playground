@@ -8,14 +8,14 @@ set -e
 # helm install openebs --namespace openebs openebs/openebs --create-namespace
 
 # Deploy Controller
-helm install arc-controller \
+helm upgrade --install arc-controller \
   --namespace arc-systems \
   --create-namespace \
   -f ~/arc-config/controller/values.yaml \
   oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set-controller
 
 # Deploy Runner Scale Set
-helm install arc-runner \
+helm upgrade --install arc-runner \
   --namespace arc-runners \
   --create-namespace \
   -f ~/arc-config/runner-scale-set/values.yaml \
