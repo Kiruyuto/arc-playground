@@ -71,14 +71,14 @@ template:
   spec:
     initContainers:
     - name: init-dind-externals
-      image: ghcr.io/kiruyuto/arc-playground/custom-action-runner:dev
+      image: ghcr.io/kiruyuto/arc-playground/custom-action-runner:latest
       command: ["cp", "-r", "/home/runner/externals/.", "/home/runner/tmpDir/"]
       volumeMounts:
         - name: dind-externals
           mountPath: /home/runner/tmpDir
     containers:
     - name: runner
-      image: ghcr.io/kiruyuto/arc-playground/custom-action-runner:dev
+      image: ghcr.io/kiruyuto/arc-playground/custom-action-runner:latest
       command: ["/home/runner/run.sh"]
       env:
         - name: DOCKER_HOST
