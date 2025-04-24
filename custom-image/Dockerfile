@@ -12,3 +12,5 @@ RUN apt-get update && \
     apt-get update && \
     apt-get install -y gh && \
     rm -rf /var/lib/apt/lists/*
+
+ENV PATH="${PATH}:/root/.dotnet/tools"
