@@ -63,5 +63,5 @@ jobs:
           file: custom-image/Dockerfile
           push: true
           tags: |
-            ghcr.io/${{ env.repository_lowercase }}/minim:latest
-            ghcr.io/${{ env.repository_lowercase }}/minim:${{ needs.release-please.outputs.version }}
+            ghcr.io/${{ env.repository_lowercase }}/custom-action-runner:latest
+            ghcr.io/${{ env.repository_lowercase }}/custom-action-runner:${{ needs.release-please.outputs.version }}
