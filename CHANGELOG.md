@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.2...image-1.0.3) (2025-04-28)
+
+
+### Chores
+
+* Set script auto fail ([eb7b8f4](https://github.com/Kiruyuto/arc-playground/commit/eb7b8f4199e81422f687ba243069bd0eeb2ae349))
+
 ## [1.0.2](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.1...image-1.0.2) (2025-04-28)
 
 
