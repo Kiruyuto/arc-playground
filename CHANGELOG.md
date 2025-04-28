@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.1](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.0...image-1.0.1) (2025-04-28)
+
+
+### Chores
+
+* Add env variables ([#5](https://github.com/Kiruyuto/arc-playground/issues/5)) ([bdac441](https://github.com/Kiruyuto/arc-playground/commit/bdac441b4d6828745517f7069532eab52a31fe74))
+* Add pre-job script ([88bfac0](https://github.com/Kiruyuto/arc-playground/commit/88bfac059a03c458fd026966c2726621b1259b23))
+* Bake script into the image ([79437dd](https://github.com/Kiruyuto/arc-playground/commit/79437dd126bdb41ce7f98f136920844f0f06b953))
+* **dependencies:** Update docker/build-push-action action to v6.16.0 ([#4](https://github.com/Kiruyuto/arc-playground/issues/4)) ([642a8b6](https://github.com/Kiruyuto/arc-playground/commit/642a8b6d7d317da8a2a3f7e985d14617853f84dc))
+
 ## 1.0.0 (2025-04-24)
 
 
