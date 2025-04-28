@@ -65,3 +65,5 @@ jobs:
           tags: |
             ghcr.io/${{ env.repository_lowercase }}/custom-action-runner:latest
             ghcr.io/${{ env.repository_lowercase }}/custom-action-runner:${{ needs.release-please.outputs.version }}
+          build-args: |
+            IMG_VERSION=${{ needs.release-please.outputs.version }}

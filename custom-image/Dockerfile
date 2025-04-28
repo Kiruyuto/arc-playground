@@ -14,3 +14,5 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 ENV PATH="${PATH}:/root/.dotnet/tools"
+ARG IMG_VERSION
+ENV DOCKER_IMAGE_VERSION=${IMG_VERSION}
