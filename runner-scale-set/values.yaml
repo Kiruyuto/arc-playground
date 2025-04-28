@@ -26,7 +26,6 @@ minRunners: 1
 runnerGroup: "Alune"
 runnerScaleSetName: "alune-sh" # Name of the runner scale set to create.  Defaults to the helm release name
 
-
 ## Container mode is an object that provides out-of-box configuration
 ## for dind and kubernetes mode. Template will be modified as documented under the
 ## template object.
