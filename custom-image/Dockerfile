@@ -13,6 +13,13 @@ RUN apt-get update && \
     apt-get install -y gh && \
     rm -rf /var/lib/apt/lists/*
 
+# Bake pre-job.sh into the image
+# ACTIONS_RUNNER_HOOK_JOB_STARTED=/home/runner/scripts/pre-job.sh
+# https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/running-scripts-before-or-after-a-job
+COPY scripts/pre-job.sh /home/runner/scripts/pre-job.sh
+RUN chmod +x /home/runner/scripts/pre-job.sh
+
 ARG IMG_VERSION=InvalidBuildSetup
+# Allows usage and installation of -g (global) tools
 ENV PATH="${PATH}:/root/.dotnet/tools"
 ENV DOCKER_IMAGE_VERSION=${IMG_VERSION}
