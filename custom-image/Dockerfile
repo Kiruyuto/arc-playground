@@ -13,4 +13,6 @@ RUN apt-get update && \
     apt-get install -y gh && \
     rm -rf /var/lib/apt/lists/*
 
+ARG IMG_VERSION=InvalidBuildSetup
 ENV PATH="${PATH}:/root/.dotnet/tools"
+ENV DOCKER_IMAGE_VERSION=${IMG_VERSION}
