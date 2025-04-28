@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.2](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.1...image-1.0.2) (2025-04-28)
+
+
+### Fixes
+
+* Invalid script path ([a95adc9](https://github.com/Kiruyuto/arc-playground/commit/a95adc9161ed305b88ee7b459325e8644f468ded))
+
+
+### Chores
+
+* Add CI workflow ([4c79034](https://github.com/Kiruyuto/arc-playground/commit/4c790346a3dfdeb4433c7a20ed6c0e2bacc560ec))
+
 ## [1.0.1](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.0...image-1.0.1) (2025-04-28)
 
 
