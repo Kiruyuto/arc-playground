@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.3...image-1.0.4) (2025-05-04)
+
+
+### Chores
+
+* **dependencies:** Update actions/create-github-app-token action to v2.0.6 ([#9](https://github.com/Kiruyuto/arc-playground/issues/9)) ([2f6e0a5](https://github.com/Kiruyuto/arc-playground/commit/2f6e0a505925efb721a27b6533008040108358cc))
+
 ## [1.0.3](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.2...image-1.0.3) (2025-04-28)
 
 
