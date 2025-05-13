@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.4](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.3...image-1.0.4) (2025-05-13)
+
+
+### Chores
+
+* **dependencies:** Update actions/create-github-app-token action to v2.0.6 ([#9](https://github.com/Kiruyuto/arc-playground/issues/9)) ([2f6e0a5](https://github.com/Kiruyuto/arc-playground/commit/2f6e0a505925efb721a27b6533008040108358cc))
+* **dependencies:** Update ghcr.io/actions/actions-runner Docker tag to v2.324.0 ([#11](https://github.com/Kiruyuto/arc-playground/issues/11)) ([d19eff4](https://github.com/Kiruyuto/arc-playground/commit/d19eff475ab48da719b52a6e6391a01ab4f46ca8))
+
 ## [1.0.3](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.2...image-1.0.3) (2025-04-28)
 
 
