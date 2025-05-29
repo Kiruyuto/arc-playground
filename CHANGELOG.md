@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.5](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.4...image-1.0.5) (2025-05-29)
+
+
+### Chores
+
+* **dependencies:** Update docker/build-push-action action to v6.17.0 ([#12](https://github.com/Kiruyuto/arc-playground/issues/12)) ([5866c8e](https://github.com/Kiruyuto/arc-playground/commit/5866c8e7e4003f2f9c435caa5901d74fc736b6f3))
+* **dependencies:** Update docker/build-push-action action to v6.18.0 ([#14](https://github.com/Kiruyuto/arc-playground/issues/14)) ([72dab63](https://github.com/Kiruyuto/arc-playground/commit/72dab638a693b079dfc8cb1379ff7c61881af926))
+
 ## [1.0.4](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.3...image-1.0.4) (2025-05-13)
 
 
