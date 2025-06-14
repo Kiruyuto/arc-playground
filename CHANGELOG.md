@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.6](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.5...image-1.0.6) (2025-06-14)
+
+
+### Fixes
+
+* Invalid default indentation ([6f506db](https://github.com/Kiruyuto/arc-playground/commit/6f506db08bcea3006afa610ab17e31b15b9c943d))
+
+
+### Chores
+
+* Add listener security context ([d8f1461](https://github.com/Kiruyuto/arc-playground/commit/d8f14619a76dc4889ce6c3e6cdfc1561d6473b1c))
+* Add uninstall script ([0299a87](https://github.com/Kiruyuto/arc-playground/commit/0299a879673203fcfdcf98adf849a358e5d35943))
+* Update scale-set default values ([cd5c525](https://github.com/Kiruyuto/arc-playground/commit/cd5c5253818588efe56b517b70d8a47a388c32f2))
+
 ## [1.0.5](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.4...image-1.0.5) (2025-06-04)
 
 
