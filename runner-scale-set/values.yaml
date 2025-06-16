@@ -117,7 +117,6 @@ template:
         securityContext:
           runAsUser: 0
           runAsGroup: 0
-          fsGroup: 0
     volumes:
       - name: work
         emptyDir: {}
