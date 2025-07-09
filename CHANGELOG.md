@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.0.6](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.5...image-1.0.6) (2025-07-09)
+
+
+### Fixes
+
+* Add missing volume mounts ([ddd2e8c](https://github.com/Kiruyuto/arc-playground/commit/ddd2e8ca361f0023068f520ac21c51ba6d2ca058))
+* Adjust invalid workflow name ([b250ed2](https://github.com/Kiruyuto/arc-playground/commit/b250ed2923c5503c69214a195107afef96e373a2))
+* Invalid default indentation ([6f506db](https://github.com/Kiruyuto/arc-playground/commit/6f506db08bcea3006afa610ab17e31b15b9c943d))
+* Remove invalid securitycontext spec ([e5ad09a](https://github.com/Kiruyuto/arc-playground/commit/e5ad09a38a57e1097c2d95bb3ac70ec668864eee))
+
+
+### Chores
+
+* Add listener security context ([d8f1461](https://github.com/Kiruyuto/arc-playground/commit/d8f14619a76dc4889ce6c3e6cdfc1561d6473b1c))
+* Add uninstall script ([0299a87](https://github.com/Kiruyuto/arc-playground/commit/0299a879673203fcfdcf98adf849a358e5d35943))
+* **dependencies:** Update docker/setup-buildx-action action to v3.11.0 ([#17](https://github.com/Kiruyuto/arc-playground/issues/17)) ([5049ae9](https://github.com/Kiruyuto/arc-playground/commit/5049ae9c55ae02f507ced47aca0f032dd2f2685b))
+* **dependencies:** Update docker/setup-buildx-action action to v3.11.1 ([#18](https://github.com/Kiruyuto/arc-playground/issues/18)) ([4be669e](https://github.com/Kiruyuto/arc-playground/commit/4be669e7f232d376c47c87372f8183087bbec055))
+* **dependencies:** Update ghcr.io/actions/actions-runner Docker tag to v2.326.0 ([#19](https://github.com/Kiruyuto/arc-playground/issues/19)) ([77e12a4](https://github.com/Kiruyuto/arc-playground/commit/77e12a4b82e06c5addc8cbe8c41d3891aa73416e))
+* Update scale-set default values ([cd5c525](https://github.com/Kiruyuto/arc-playground/commit/cd5c5253818588efe56b517b70d8a47a388c32f2))
+
 ## [1.0.5](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.4...image-1.0.5) (2025-06-04)
 
 
