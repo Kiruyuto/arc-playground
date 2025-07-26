@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.7](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.6...image-1.0.7) (2025-07-26)
+
+
+### Chores
+
+* **config:** Migrate renovate config ([#20](https://github.com/Kiruyuto/arc-playground/issues/20)) ([89a716a](https://github.com/Kiruyuto/arc-playground/commit/89a716a3a5e691113d840d74713d21a73832c05d))
+* **dependencies:** Update ghcr.io/actions/actions-runner Docker tag to v2.327.0 ([#22](https://github.com/Kiruyuto/arc-playground/issues/22)) ([89bc7c3](https://github.com/Kiruyuto/arc-playground/commit/89bc7c3ef39437c4859b6db4fda6f708664aa049))
+* **dependencies:** Update ghcr.io/actions/actions-runner Docker tag to v2.327.1 ([#23](https://github.com/Kiruyuto/arc-playground/issues/23)) ([752dca0](https://github.com/Kiruyuto/arc-playground/commit/752dca0b03a85ae0349165d25089e4d6bceef6d3))
+
 ## [1.0.6](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.5...image-1.0.6) (2025-07-09)
 
 
