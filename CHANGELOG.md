@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.7](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.6...image-1.0.7) (2025-08-13)
+
+
+### Chores
+
+* **config:** Migrate renovate config ([#20](https://github.com/Kiruyuto/arc-playground/issues/20)) ([89a716a](https://github.com/Kiruyuto/arc-playground/commit/89a716a3a5e691113d840d74713d21a73832c05d))
+* **dependencies:** Update actions/checkout action to v5 ([#27](https://github.com/Kiruyuto/arc-playground/issues/27)) ([0c3de17](https://github.com/Kiruyuto/arc-playground/commit/0c3de17f8f298eb36c5031e632d9f07ecf5f6eae))
+* **dependencies:** Update actions/create-github-app-token action to v2.1.0 ([#25](https://github.com/Kiruyuto/arc-playground/issues/25)) ([66aef10](https://github.com/Kiruyuto/arc-playground/commit/66aef10bde9cd3fb8cb31b62aac0921a414bdcef))
+* **dependencies:** Update all non-major dependencies ([#26](https://github.com/Kiruyuto/arc-playground/issues/26)) ([cbc7564](https://github.com/Kiruyuto/arc-playground/commit/cbc7564fbbe3d7b14d3ab8324373667f556211b2))
+* **dependencies:** Update docker/login-action action to v3.5.0 ([#24](https://github.com/Kiruyuto/arc-playground/issues/24)) ([f30339c](https://github.com/Kiruyuto/arc-playground/commit/f30339cd31efa8d6e7f793de6bc5d510d494bbb2))
+* **dependencies:** Update ghcr.io/actions/actions-runner Docker tag to v2.327.0 ([#22](https://github.com/Kiruyuto/arc-playground/issues/22)) ([89bc7c3](https://github.com/Kiruyuto/arc-playground/commit/89bc7c3ef39437c4859b6db4fda6f708664aa049))
+* **dependencies:** Update ghcr.io/actions/actions-runner Docker tag to v2.327.1 ([#23](https://github.com/Kiruyuto/arc-playground/issues/23)) ([752dca0](https://github.com/Kiruyuto/arc-playground/commit/752dca0b03a85ae0349165d25089e4d6bceef6d3))
+
 ## [1.0.6](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.5...image-1.0.6) (2025-07-09)
 
 
