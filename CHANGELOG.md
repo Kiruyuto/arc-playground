@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.8](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.7...image-1.0.8) (2025-08-15)
+
+
+### Chores
+
+* **dependencies:** Update ghcr.io/actions/actions-runner Docker tag to v2.328.0 ([#28](https://github.com/Kiruyuto/arc-playground/issues/28)) ([4a7f79c](https://github.com/Kiruyuto/arc-playground/commit/4a7f79c68136875666852e6c668c3a5f52a9cc07))
+
 ## [1.0.7](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.6...image-1.0.7) (2025-08-13)
 
 
