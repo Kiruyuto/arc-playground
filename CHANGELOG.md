@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.9](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.8...image-1.0.9) (2025-08-22)
+
+
+### Chores
+
+* **dependencies:** Update googleapis/release-please-action action to v4.3.0 (ci) ([#30](https://github.com/Kiruyuto/arc-playground/issues/30)) ([8a2f3c0](https://github.com/Kiruyuto/arc-playground/commit/8a2f3c012dd8c3e65f4b5a9b71b675f55261754f))
+
 ## [1.0.8](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.7...image-1.0.8) (2025-08-15)
 
 
