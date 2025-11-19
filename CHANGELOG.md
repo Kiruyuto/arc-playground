@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.9...image-1.1.0) (2025-11-19)
+
+
+### Features
+
+* **Dockerfile:** Install nodejs ([720dda5](https://github.com/Kiruyuto/arc-playground/commit/720dda5098d4ee93a7171ea1134d43cd6b3fe4d7))
+
+
+### Chores
+
+* **dependencies:** Update actions/checkout action to v5.0.1 (ci) ([#37](https://github.com/Kiruyuto/arc-playground/issues/37)) ([9f3ae27](https://github.com/Kiruyuto/arc-playground/commit/9f3ae27c4eb41a2ee00edf39ce888fb0ccec5c57))
+* **dependencies:** Update googleapis/release-please-action action to v4.4.0 (ci) ([#35](https://github.com/Kiruyuto/arc-playground/issues/35)) ([f82ffcf](https://github.com/Kiruyuto/arc-playground/commit/f82ffcf119aa53be93c18cecd029333a0cd66a71))
+
 ## [1.0.9](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.8...image-1.0.9) (2025-10-16)
 
 
