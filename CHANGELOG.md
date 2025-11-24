@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.1](https://github.com/Kiruyuto/arc-playground/compare/image-1.1.0...image-1.1.1) (2025-11-24)
+
+
+### Chores
+
+* **dependencies:** Update .NET to v2.330.0 (dotnet) ([#38](https://github.com/Kiruyuto/arc-playground/issues/38)) ([047c7ee](https://github.com/Kiruyuto/arc-playground/commit/047c7ee84fb1e32cf1a27554dd0f92a931a8cc7a))
+* **dependencies:** Update actions/checkout action to v6 (ci) ([#41](https://github.com/Kiruyuto/arc-playground/issues/41)) ([baf526c](https://github.com/Kiruyuto/arc-playground/commit/baf526cc56771438c66525ddd5d6365da7631345))
+* **dependencies:** Update actions/create-github-app-token action to v2.2.0 (ci) ([#39](https://github.com/Kiruyuto/arc-playground/issues/39)) ([6fb457a](https://github.com/Kiruyuto/arc-playground/commit/6fb457a2abf028e7de46b88adc4998b058bed07a))
+
 ## [1.1.0](https://github.com/Kiruyuto/arc-playground/compare/image-1.0.9...image-1.1.0) (2025-11-19)
 
 
