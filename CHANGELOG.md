@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.2](https://github.com/Kiruyuto/arc-playground/compare/image-1.1.1...image-1.1.2) (2026-01-10)
+
+
+### Chores
+
+* **dependencies:** Update actions/checkout action to v6.0.1 (ci) ([#42](https://github.com/Kiruyuto/arc-playground/issues/42)) ([006d555](https://github.com/Kiruyuto/arc-playground/commit/006d5554184c017fed567c562142b252851cf125))
+* **dependencies:** Update actions/create-github-app-token action to v2.2.1 (ci) ([#44](https://github.com/Kiruyuto/arc-playground/issues/44)) ([1730269](https://github.com/Kiruyuto/arc-playground/commit/1730269bfc03ad8ac68f52c000dcf78b1ec190c9))
+* **dependencies:** Update docker/setup-buildx-action action to v3.12.0 (ci) ([#45](https://github.com/Kiruyuto/arc-playground/issues/45)) ([33a0425](https://github.com/Kiruyuto/arc-playground/commit/33a04251d71f457ee8ee15d15dc12ff81eff9951))
+* **dependencies:** Update ghcr.io/actions/actions-runner Docker tag to v2.331.0 (dotnet) ([#46](https://github.com/Kiruyuto/arc-playground/issues/46)) ([6b46f3a](https://github.com/Kiruyuto/arc-playground/commit/6b46f3a93a0b55a4cc5bee9b17cceda8fa165612))
+
 ## [1.1.1](https://github.com/Kiruyuto/arc-playground/compare/image-1.1.0...image-1.1.1) (2025-11-24)
 
 
