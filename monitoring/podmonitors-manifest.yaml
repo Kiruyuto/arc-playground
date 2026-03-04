@@ -1,0 +1,51 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: arc-controller
+  namespace: monitoring
+  labels:
+    "monitoring.arc/enabled": "true"
+spec:
+  namespaceSelector:
+    matchNames:
+      - arc-systems
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: controller-manager
+  podMetricsEndpoints:
+    - interval: 15s
+      path: /metrics
+      relabelings:
+        - action: replace
+          sourceLabels: [__meta_kubernetes_pod_ip]
+          targetLabel: __address__
+          replacement: $1:8080
+        - action: labelmap
+          regex: __meta_kubernetes_pod_label_(actions_github_com_.+)
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: arc-listener
+  namespace: monitoring
+  labels:
+    "monitoring.arc/enabled": "true"
+spec:
+  namespaceSelector:
+    matchNames:
+      - arc-systems
+      - arc-runners
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: runner-scale-set-listener
+  podMetricsEndpoints:
+    - interval: 15s
+      path: /metrics
+      relabelings:
+        - action: replace
+          sourceLabels: [__meta_kubernetes_pod_ip]
+          targetLabel: __address__
+          replacement: $1:8080
+        - action: labelmap
+          regex: __meta_kubernetes_pod_label_(actions_github_com_.+)
