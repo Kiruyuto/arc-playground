@@ -1,0 +1,6 @@
+current-test-setup/
+current-homelab-setup/
+current-*-setup/
+*.pem
+*.key
+*.p12

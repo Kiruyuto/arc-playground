@@ -1,0 +1,20 @@
+prometheus:
+  service:
+    type: NodePort
+    nodePort: 32090
+  prometheusSpec:
+    podMonitorSelector:
+      matchLabels:
+        "monitoring.arc/enabled": "true"
+    podMonitorNamespaceSelector: {}
+
+grafana:
+  service:
+    type: NodePort
+    nodePort: 32000
+  initChownData:
+    enabled: false
+  persistence:
+    enabled: true
+    size: 10Gi
+    storageClassName: local-path
