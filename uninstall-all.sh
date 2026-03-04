@@ -18,5 +18,13 @@ if [[ "${UNINSTALL_MONITORING}" == "true" ]]; then
     --wait || true
 fi
 
-# Delete CRDs
-kubectl get crds | grep actions.github.com | awk '{print $1}' | xargs -r kubectl delete crd
+# Delete ARC CRDs if they exist.
+crds_to_delete="$(kubectl get crds -o name | grep -F 'actions.github.com' || true)"
+if [[ -n "${crds_to_delete}" ]]; then
+  echo "Deleting ARC CRDs.."
+  while IFS= read -r crd; do
+    kubectl delete "${crd}"
+  done <<< "${crds_to_delete}"
+else
+  echo "No ARC CRDs found. Skipping.."
+fi
