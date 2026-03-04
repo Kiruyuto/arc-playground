@@ -115,7 +115,7 @@ listenerMetrics:
           "event_name",
           "job_workflow_ref",
           "job_workflow_name",
-          "job_workflow_target",
+          "job_workflow_target"
         ]
     gha_completed_jobs_total:
       labels:
@@ -128,7 +128,7 @@ listenerMetrics:
           "job_result",
           "job_workflow_ref",
           "job_workflow_name",
-          "job_workflow_target",
+          "job_workflow_target"
         ]
   gauges:
     gha_assigned_jobs:
@@ -158,7 +158,7 @@ listenerMetrics:
           "event_name",
           "job_workflow_ref",
           "job_workflow_name",
-          "job_workflow_target",
+          "job_workflow_target"
         ]
       buckets:
         [
@@ -206,7 +206,7 @@ listenerMetrics:
           1800.0,
           2400.0,
           3000.0,
-          3600.0,
+          3600.0
         ]
     gha_job_execution_duration_seconds:
       labels:
@@ -219,7 +219,7 @@ listenerMetrics:
           "job_result",
           "job_workflow_ref",
           "job_workflow_name",
-          "job_workflow_target",
+          "job_workflow_target"
         ]
       buckets:
         [
@@ -267,5 +267,5 @@ listenerMetrics:
           1800.0,
           2400.0,
           3000.0,
-          3600.0,
+          3600.0
         ]
