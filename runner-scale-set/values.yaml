@@ -12,10 +12,8 @@ githubConfigSecret:
 maxRunners: 10
 minRunners: 1
 
-# RunnerGroup, e.g: "Homelab"
-runnerGroup: "Default"
-# Name of the runner scale set to create
-runnerScaleSetName: "ubuntu-sh"
+runnerGroup: "Alune"
+runnerScaleSetName: "alune-sh"
 
 # listenerTemplate is the PodSpec for each listener Pod
 listenerTemplate:
