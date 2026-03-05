@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.0](https://github.com/Kiruyuto/arc-playground/compare/image-1.1.3...image-1.2.0) (2026-03-05)
+
+
+### Features
+
+* Add apply-values script ([e8cca5d](https://github.com/Kiruyuto/arc-playground/commit/e8cca5d377fcd005731d77a2970f4b167a7a05fb))
+* Re-enable monitoring ([#52](https://github.com/Kiruyuto/arc-playground/issues/52)) ([2086850](https://github.com/Kiruyuto/arc-playground/commit/208685062e2bc22e4dadca70ab1bdeee9a553a51))
+
+
+### Fixes
+
+* Accidentaly changed runner scale set name ([97b6e9c](https://github.com/Kiruyuto/arc-playground/commit/97b6e9c3f0469d072f962326b939d82c5e86800d))
+* Update upgrade strategy to immediate in values.yaml ([e3f07eb](https://github.com/Kiruyuto/arc-playground/commit/e3f07ebb4873aa6a1cccaf065959519e39dcead1))
+
 ## [1.1.3](https://github.com/Kiruyuto/arc-playground/compare/image-1.1.2...image-1.1.3) (2026-02-25)
 
 
