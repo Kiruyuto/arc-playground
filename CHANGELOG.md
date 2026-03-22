@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.2.0](https://github.com/Kiruyuto/arc-playground/compare/image-1.1.3...image-1.2.0) (2026-03-22)
+
+
+### Features
+
+* Add apply-values script ([e8cca5d](https://github.com/Kiruyuto/arc-playground/commit/e8cca5d377fcd005731d77a2970f4b167a7a05fb))
+* Re-enable monitoring ([#52](https://github.com/Kiruyuto/arc-playground/issues/52)) ([2086850](https://github.com/Kiruyuto/arc-playground/commit/208685062e2bc22e4dadca70ab1bdeee9a553a51))
+
+
+### Fixes
+
+* Accidentaly changed runner scale set name ([97b6e9c](https://github.com/Kiruyuto/arc-playground/commit/97b6e9c3f0469d072f962326b939d82c5e86800d))
+* Force-apply CRDs ([e0c9728](https://github.com/Kiruyuto/arc-playground/commit/e0c9728c6617d915d13091b79fedd362c788c058))
+* Update upgrade strategy to immediate in values.yaml ([e3f07eb](https://github.com/Kiruyuto/arc-playground/commit/e3f07ebb4873aa6a1cccaf065959519e39dcead1))
+
+
+### Chores
+
+* **dependencies:** Update actions/create-github-app-token action to v2.2.2 ([#54](https://github.com/Kiruyuto/arc-playground/issues/54)) ([8c17ac5](https://github.com/Kiruyuto/arc-playground/commit/8c17ac5407cb3181690c05df8c9a952a72a53c65))
+* **dependencies:** Update ghcr.io/actions/actions-runner Docker tag to v2.333.0 ([#55](https://github.com/Kiruyuto/arc-playground/issues/55)) ([0aab8f5](https://github.com/Kiruyuto/arc-playground/commit/0aab8f5fff62192e0f51e001ece047ca3ce95aca))
+* **dependencies:** Update GitHub Actions dependencies (major) ([#56](https://github.com/Kiruyuto/arc-playground/issues/56)) ([68fbc34](https://github.com/Kiruyuto/arc-playground/commit/68fbc34c7b2c9de3efa982181423ff51b2becfb4))
+
 ## [1.1.3](https://github.com/Kiruyuto/arc-playground/compare/image-1.1.2...image-1.1.3) (2026-02-25)
 
 
