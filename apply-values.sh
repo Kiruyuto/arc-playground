@@ -5,6 +5,7 @@ set -euo pipefail
 ARC_CONFIG_DIR="${ARC_CONFIG_DIR:-$HOME/arc-config}"
 APPLY_MONITORING="${APPLY_MONITORING:-true}"
 PROM_SKIP_CRDS="${PROM_SKIP_CRDS:-true}"
+PROM_SYNC_CRDS="${PROM_SYNC_CRDS:-true}"
 
 require_values_file() {
   local values_file="$1"
@@ -12,6 +13,12 @@ require_values_file() {
     echo "Missing values file: ${values_file}"
     exit 1
   fi
+}
+
+sync_prometheus_crds() {
+  echo "Syncing kube-prometheus-stack CRDs..."
+  helm show crds prometheus-community/kube-prometheus-stack | \
+    kubectl apply --server-side --force-conflicts -f -
 }
 
 upgrade_existing_release() {
@@ -58,6 +65,10 @@ if [[ "${APPLY_MONITORING}" == "true" ]]; then
 
   helm repo add prometheus-community https://prometheus-community.github.io/helm-charts >/dev/null 2>&1 || true
   helm repo update >/dev/null
+
+  if [[ "${PROM_SYNC_CRDS}" == "true" ]]; then
+    sync_prometheus_crds
+  fi
 
   monitoring_args=()
   if [[ "${PROM_SKIP_CRDS}" == "true" ]]; then

@@ -5,6 +5,13 @@ set -euo pipefail
 ARC_CONFIG_DIR="${ARC_CONFIG_DIR:-$HOME/arc-config}"
 ENABLE_MONITORING="${ENABLE_MONITORING:-true}"
 PROM_SKIP_CRDS="${PROM_SKIP_CRDS:-true}"
+PROM_SYNC_CRDS="${PROM_SYNC_CRDS:-true}"
+
+sync_prometheus_crds() {
+  echo "Syncing kube-prometheus-stack CRDs..."
+  helm show crds prometheus-community/kube-prometheus-stack | \
+    kubectl apply --server-side --force-conflicts -f -
+}
 
 # Deploy Controller
 helm upgrade --install arc-controller \
@@ -24,6 +31,10 @@ helm upgrade --install arc-runner \
 if [[ "${ENABLE_MONITORING}" == "true" ]]; then
   helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
   helm repo update
+
+  if [[ "${PROM_SYNC_CRDS}" == "true" ]]; then
+    sync_prometheus_crds
+  fi
 
   PROM_CRD_ARGS=()
   if [[ "${PROM_SKIP_CRDS}" == "true" ]]; then
