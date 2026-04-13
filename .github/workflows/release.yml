@@ -20,13 +20,13 @@ jobs:
       version: ${{ steps.run-release-please.outputs.version }}
     steps:
       - name: 'Generate App Token'
-        uses: actions/create-github-app-token@f8d387b68d61c58ab83c6c016672934102569859 # v3.0.0
+        uses: actions/create-github-app-token@1b10c78c7865c340bc4f6099eb2f838309f1e8c3 # v3.1.1
         id: generate-token
         with:
           app-id: ${{ secrets.DEV_APP_ID}}
           private-key: ${{ secrets.DEV_APP_PRIVATE_KEY }}
       - name: 'Run release-please'
-        uses: googleapis/release-please-action@16a9c90856f42705d54a6fda1823352bdc62cf38 # v4.4.0
+        uses: googleapis/release-please-action@5c625bfb5d1ff62eadeeb3772007f7f66fdcf071 # v4.4.1
         id: run-release-please
         with:
           token: ${{ steps.generate-token.outputs.token }}
@@ -49,7 +49,7 @@ jobs:
       - name: 'Set up Docker Buildx'
         uses: docker/setup-buildx-action@4d04d5d9486b7bd6fa91e7baf45bbb4f8b9deedd # v4.0.0
       - name: 'Log in to GitHub Container Registry'
-        uses: docker/login-action@b45d80f862d83dbcd57f89517bcf500b2ab88fb2 # v4.0.0
+        uses: docker/login-action@4907a6ddec9925e35a0a9e82d7399ccc52663121 # v4.1.0
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
@@ -57,7 +57,7 @@ jobs:
       - name: 'Get lowercase repository'  # Owner/Repo -> owner/repo
         run: echo "repository_lowercase=${GITHUB_REPOSITORY@L}" >> "${GITHUB_ENV}"
       - name: 'Build and push Docker image'
-        uses: docker/build-push-action@d08e5c354a6adb9ed34480a06d141179aa583294 # v7.0.0
+        uses: docker/build-push-action@bcafcacb16a39f128d818304e6c9c0c18556b85f # v7.1.0
         with:
           context: .
           file: custom-image/Dockerfile
