@@ -7,5 +7,23 @@
   "baseBranchPatterns": [
     "master"
   ],
-  "rebaseWhen": "behind-base-branch"
+  "rebaseWhen": "behind-base-branch",
+  "schedule": [
+    "at any time"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update the .NET SDK baked into the custom runner image",
+      "managerFilePatterns": [
+        "/(^|/)custom-image/Dockerfile$/"
+      ],
+      "matchStrings": [
+        "ARG DOTNET_SDK_VERSION=(?<currentValue>\\S+)"
+      ],
+      "datasourceTemplate": "dotnet-version",
+      "depNameTemplate": "dotnet-sdk",
+      "versioningTemplate": "semver-coerced"
+    }
+  ]
 }
