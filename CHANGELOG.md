@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.3.0](https://github.com/Kiruyuto/arc-playground/compare/image-1.2.0...image-1.3.0) (2026-04-28)
+
+
+### Features
+
+* **image:** Bake latest .NET SDK into runner image ([#62](https://github.com/Kiruyuto/arc-playground/issues/62)) ([68c17fe](https://github.com/Kiruyuto/arc-playground/commit/68c17fe7b68f4fd96c5d3dede1c1503e209922ea))
+
+
+### Chores
+
+* **dependencies:** Update ghcr.io/actions/actions-runner Docker tag to v2.333.1 ([#57](https://github.com/Kiruyuto/arc-playground/issues/57)) ([3f03acb](https://github.com/Kiruyuto/arc-playground/commit/3f03acbd7168336e76bc0060b57f80c73ff0878b))
+* **dependencies:** Update ghcr.io/actions/actions-runner Docker tag to v2.334.0 ([#60](https://github.com/Kiruyuto/arc-playground/issues/60)) ([0740849](https://github.com/Kiruyuto/arc-playground/commit/074084956071d2c7313f537874c94588e9e8b0b4))
+* **dependencies:** Update GitHub Actions dependencies ([#59](https://github.com/Kiruyuto/arc-playground/issues/59)) ([8df626c](https://github.com/Kiruyuto/arc-playground/commit/8df626ca030d49c6999c225252f504fcebcea48b))
+* **dependencies:** Update googleapis/release-please-action action to v5 ([#61](https://github.com/Kiruyuto/arc-playground/issues/61)) ([ecf54fb](https://github.com/Kiruyuto/arc-playground/commit/ecf54fb83994c93835fccf13d96b4ec2dece9c44))
+
 ## [1.2.0](https://github.com/Kiruyuto/arc-playground/compare/image-1.1.3...image-1.2.0) (2026-03-22)
 
 
