@@ -13,7 +13,7 @@ permissions:
 jobs:
   release-please:
     name: 'Release-Please'
-    runs-on: [ 'ubuntu-latest' ]
+    runs-on: [ 'ubuntu-slim' ]
     outputs:
       releases_created: ${{ steps.run-release-please.outputs.releases_created }}
       tag_name: ${{ steps.run-release-please.outputs.tag_name }}
