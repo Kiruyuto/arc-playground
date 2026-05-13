@@ -3,7 +3,7 @@ FROM ghcr.io/actions/actions-runner:2.334.0
 USER root
 
 ARG DOTNET_CHANNEL=10.0
-ARG DOTNET_SDK_VERSION=10.0.203
+ARG DOTNET_SDK_VERSION=10.0.300
 
 RUN apt-get update && \
     apt-get install -y wget curl && \
