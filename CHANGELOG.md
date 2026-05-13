@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.1](https://github.com/Kiruyuto/arc-playground/compare/image-1.3.0...image-1.3.1) (2026-05-13)
+
+
+### Chores
+
+* **dependencies:** Update actions/create-github-app-token action to v3.2.0 ([#63](https://github.com/Kiruyuto/arc-playground/issues/63)) ([849d25a](https://github.com/Kiruyuto/arc-playground/commit/849d25a544104ccbd86c798c485317d9f1f8c698))
+* **dependencies:** Update dependency dotnet-sdk to v10.0.300 ([#65](https://github.com/Kiruyuto/arc-playground/issues/65)) ([d871263](https://github.com/Kiruyuto/arc-playground/commit/d871263e8ef3f294638707046a1a1957dbaaddbc))
+
 ## [1.3.0](https://github.com/Kiruyuto/arc-playground/compare/image-1.2.0...image-1.3.0) (2026-04-28)
 
 
