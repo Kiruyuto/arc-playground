@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.3.3](https://github.com/Kiruyuto/arc-playground/compare/image-1.3.2...image-1.3.3) (2026-07-16)
+
+
+### Chores
+
+* **dependencies:** Update .NET non-Major dependencies to v10.0.301 ([#71](https://github.com/Kiruyuto/arc-playground/issues/71)) ([34e11ed](https://github.com/Kiruyuto/arc-playground/commit/34e11edff803b3454091af92bddc384ac1adf6fc))
+* **dependencies:** Update actions/checkout action to v7 ([#73](https://github.com/Kiruyuto/arc-playground/issues/73)) ([80be76d](https://github.com/Kiruyuto/arc-playground/commit/80be76d2f9f0ed788862bd60302fb8f3090bb8e2))
+* **dependencies:** Update dependency dotnet-sdk to v10.0.302 ([#76](https://github.com/Kiruyuto/arc-playground/issues/76)) ([5a985eb](https://github.com/Kiruyuto/arc-playground/commit/5a985eb92b95a9ef943d95c8dcb8496ef09cffea))
+* **dependencies:** Update docker/build-push-action action to v7.3.0 ([#74](https://github.com/Kiruyuto/arc-playground/issues/74)) ([0c5e971](https://github.com/Kiruyuto/arc-playground/commit/0c5e9718d768c4df7f101a7a1927528ace7f0c51))
+* **dependencies:** Update docker/login-action action to v4.4.0 ([#75](https://github.com/Kiruyuto/arc-playground/issues/75)) ([c6e4f4e](https://github.com/Kiruyuto/arc-playground/commit/c6e4f4ea8d5151edea10b3de5705478ad8b2c3bc))
+
 ## [1.3.2](https://github.com/Kiruyuto/arc-playground/compare/image-1.3.1...image-1.3.2) (2026-06-09)
 
 
