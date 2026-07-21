@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.4](https://github.com/Kiruyuto/arc-playground/compare/image-1.3.3...image-1.3.4) (2026-07-21)
+
+
+### Chores
+
+* **dependencies:** Update actions/checkout action to v7.0.1 ([#77](https://github.com/Kiruyuto/arc-playground/issues/77)) ([f3ac2f6](https://github.com/Kiruyuto/arc-playground/commit/f3ac2f6bd28fdcb8aefe9b1ce9bf7ea119668e8a))
+* **dependencies:** Update ghcr.io/actions/actions-runner Docker tag to v2.336.0 ([#78](https://github.com/Kiruyuto/arc-playground/issues/78)) ([e9f8fd8](https://github.com/Kiruyuto/arc-playground/commit/e9f8fd8cac511edcafe5bd452fd802967eeab2f2))
+
 ## [1.3.3](https://github.com/Kiruyuto/arc-playground/compare/image-1.3.2...image-1.3.3) (2026-07-16)
 
 
