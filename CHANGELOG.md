@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.5](https://github.com/Kiruyuto/arc-playground/compare/image-1.3.4...image-1.3.5) (2026-08-12)
+
+
+### Chores
+
+* **dependencies:** Update dependency dotnet-sdk to v10.0.400 ([#81](https://github.com/Kiruyuto/arc-playground/issues/81)) ([936debc](https://github.com/Kiruyuto/arc-playground/commit/936debc6702ea1e58f42ee39e9234220545401cf))
+* **dependencies:** Update docker/login-action action to v4.5.0 ([#80](https://github.com/Kiruyuto/arc-playground/issues/80)) ([85ed140](https://github.com/Kiruyuto/arc-playground/commit/85ed1406b7f558b6634f8d70f016e1bed12d92e7))
+
 ## [1.3.4](https://github.com/Kiruyuto/arc-playground/compare/image-1.3.3...image-1.3.4) (2026-07-21)
 
 
