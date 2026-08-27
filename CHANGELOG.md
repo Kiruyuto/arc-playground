@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.6](https://github.com/Kiruyuto/arc-playground/compare/image-1.3.5...image-1.3.6) (2026-08-27)
+
+
+### Chores
+
+* **dependencies:** Update docker/setup-buildx-action action to v4.3.0 ([#83](https://github.com/Kiruyuto/arc-playground/issues/83)) ([bfdb85e](https://github.com/Kiruyuto/arc-playground/commit/bfdb85ec55da14b7822117e647ba6839eaa86e49))
+* **dependencies:** Update ghcr.io/actions/actions-runner Docker tag to v2.337.0 ([#84](https://github.com/Kiruyuto/arc-playground/issues/84)) ([ffc601a](https://github.com/Kiruyuto/arc-playground/commit/ffc601a04fa368c19ed82dfb6b127cf550dd640c))
+
 ## [1.3.5](https://github.com/Kiruyuto/arc-playground/compare/image-1.3.4...image-1.3.5) (2026-08-12)
 
 
