@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.7](https://github.com/Kiruyuto/arc-playground/compare/image-1.3.6...image-1.3.7) (2026-09-10)
+
+
+### Chores
+
+* **dependencies:** Update dependency dotnet-sdk to v10.0.401 ([#86](https://github.com/Kiruyuto/arc-playground/issues/86)) ([875eedc](https://github.com/Kiruyuto/arc-playground/commit/875eedcacf3705b6bba0444ae5cdf07c3798abba))
+
 ## [1.3.6](https://github.com/Kiruyuto/arc-playground/compare/image-1.3.5...image-1.3.6) (2026-08-27)
 
 
